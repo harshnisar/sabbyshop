@@ -1,0 +1,34 @@
+{
+    "name": "h",
+    "email": "h",
+    "address": "h",
+    "mobile": "h",
+    "selected_posters": {
+        "Autorides": {
+            "A3": 0,
+            "A4": 1
+        },
+        "Metro blues": {
+            "A3": 0,
+            "A4": 0
+        },
+        "Somewhere in Humayunpur": {
+            "A3": 0,
+            "A4": 0
+        },
+        "Waiting": {
+            "A3": 0,
+            "A4": 0
+        },
+        "In the crowd": {
+            "A3": 0,
+            "A4": 0
+        },
+        "Caretaker": {
+            "A3": 0,
+            "A4": 0
+        }
+    },
+    "total_amount": 400,
+    "payment_screenshot": "rabbithci.jpg"
+}
