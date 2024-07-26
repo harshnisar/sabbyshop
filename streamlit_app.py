@@ -7,22 +7,22 @@ import base64
 
 # Poster details
 poster_details = {
-    "Poster 1": "poster1.jpg",
-    "Poster 2": "poster2.jpg",
-    "Poster 3": "poster3.jpg",
-    "Poster 4": "poster4.jpg",
-    "Poster 5": "poster5.jpg",
-    "Poster 6": "poster6.jpg"
+    "Autorides": "1.png",
+    "Metro blues": "2.png",
+    "Somewhere in Humayunpur": "3.png",
+    "Waiting": "4.png",
+    "In the crowd": "5.png",
+    "Caretaker": "6.png"
 }
 
 # Poster descriptions
 poster_descriptions = {
-    "Poster 1": "This is the description for Poster 1. It's a beautiful piece of art.",
-    "Poster 2": "This is the description for Poster 2. A stunning depiction of modern art.",
-    "Poster 3": "This is the description for Poster 3. A classic design with vibrant colors.",
-    "Poster 4": "This is the description for Poster 4. A serene landscape with calming hues.",
-    "Poster 5": "This is the description for Poster 5. Abstract art that ignites imagination.",
-    "Poster 6": "This is the description for Poster 6. A masterpiece that speaks to the soul."
+    "Autorides": "Daily ritual to start and end the day.",
+    "Metro blues": "Sometimes mindless scrolling is an act of self-preservation.",
+    "Somewhere in Humayunpur": "Warmth of their hand and soft lights.",
+    "Waiting": "As the day ends the sky welcomes you home.",
+    "In the crowd": "When life get too much, just look up.",
+    "Caretaker": "An act of unconditional love."
 }
 
 # Poster prices
@@ -59,9 +59,13 @@ def load_image(image_path):
 st.markdown("""
     <style>
     body {
-        background-color: #2c3e50;
-        color: #ecf0f1;
+        background-color: #2c3e50 !important;
+        color: #ecf0f1 !important;
     }
+    .stApp {
+        background-color: #2c3e50 !important;
+        color: #ecf0f1;
+        }
     .center {
         display: flex;
         justify-content: center;
@@ -95,7 +99,7 @@ st.markdown("""
     }
     .poster-title {
         font-size: 1.2em;
-        color: #9b59b6;
+        color: #ecf0f1;
         margin-top: 0px;
     }
     .poster-description {
@@ -169,7 +173,7 @@ for poster, file in poster_details.items():
     st.markdown(f"""<div class='center'>
                 <h3 class='poster-title'>{poster}</h3>
                 <p class='poster-description'>{poster_descriptions[poster]}</p>
-                <img src='data:image/jpg;base64,{image_data}' width='250'>
+                <img src='data:image/png;base64,{image_data}' width='250'>
                 </div>""", unsafe_allow_html=True)
     st.markdown("<div class='horizontal-center'>", unsafe_allow_html=True)
     a3_qty = st.number_input(f"A3 Quantity", min_value=0, value=0, key=f"{poster}_A3", format="%d", on_change=reset_qr_code)
